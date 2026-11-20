@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101817">
+  <meta name="description" content="Conheça ADS no IFCE campus Boa Viagem e descubra, na prática, como HTML, CSS e JavaScript constroem um site.">
+  <title>ADS por dentro · IFCE Boa Viagem</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/painel.css">
+  <script src="assets/apresentacao.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para a apresentação</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <aside class="sidebar" aria-label="Navegação e painel de demonstração">
+    <a class="brand" href="#inicio" aria-label="IFCE, campus Boa Viagem, início">
+      <svg class="if-symbol" viewBox="0 0 38 50" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="#ec6a6c"/><g fill="currentColor"><rect x="14" y="1" width="10" height="10" rx="1"/><rect x="27" y="1" width="10" height="10" rx="1"/><rect x="1" y="14" width="10" height="10" rx="1"/><rect x="14" y="14" width="10" height="10" rx="1"/><rect x="1" y="27" width="10" height="10" rx="1"/><rect x="14" y="27" width="10" height="10" rx="1"/><rect x="27" y="27" width="10" height="10" rx="1"/><rect x="1" y="40" width="10" height="10" rx="1"/><rect x="14" y="40" width="10" height="10" rx="1"/></g></svg>
+      <span><strong>IFCE</strong><span>campus Boa Viagem</span></span>
+    </a>
+    <button class="mobile-menu icon-button" aria-expanded="false" aria-controls="sidebar-body" aria-label="Abrir navegação e controles"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div class="sidebar-body" id="sidebar-body">
+      <div class="project-name"><span class="project-mark" aria-hidden="true">&lt;/&gt;</span><span>ADS <strong>por dentro</strong><small>Uma experiência interativa</small></span></div>
+      <nav class="navigation" aria-label="Seções da apresentação">
+        <a href="#inicio" class="nav-link active" aria-current="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></svg>Conheça o curso</a>
+        <a href="#laboratorio" class="nav-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg>Laboratório web<span class="nav-badge">Teste</span></a>
+        <a href="#formacao" class="nav-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6M22 9v8"/></svg>Sua formação</a>
+        <a href="#acessibilidade" class="nav-link"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="m4 9 8 2 8-2m-8 2v5m0-1-5 7m5-7 5 7"/></svg>Tecnologia para todos</a>
+        <a href="#desafio" class="nav-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z"/></svg>Seu primeiro desafio</a>
+      </nav>
+      <div class="global-controls">
+        <div class="controls-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 3v8m8 2v8"/></svg><h2>Desmonte o site</h2><span class="live-indicator" title="Demonstração interativa"></span></div>
+        <p>Desligue uma tecnologia.<br>Descubra o que muda.</p>
+        <div class="global-switches">
+          <button class="tech-switch" data-global="html" role="switch" aria-checked="true" aria-label="HTML em toda a apresentação"><span class="tech-label"><span class="tech-icon html-color">&lt;&gt;</span><span><strong>HTML</strong><small>Estrutura e conteúdo</small></span></span><span class="switch-track"><span></span></span></button>
+          <button class="tech-switch" data-global="css" role="switch" aria-checked="true" aria-label="CSS em toda a apresentação"><span class="tech-label"><span class="tech-icon css-color">#</span><span><strong>CSS</strong><small>Estilo e aparência</small></span></span><span class="switch-track"><span></span></span></button>
+          <button class="tech-switch" data-global="js" role="switch" aria-checked="true" aria-label="JavaScript em toda a apresentação"><span class="tech-label"><span class="tech-icon js-color">JS</span><span><strong>JavaScript</strong><small>Ações e interatividade</small></span></span><span class="switch-track"><span></span></span></button>
+        </div>
+        <button class="remove-all" id="remove-all"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v9m-6-6a9 9 0 1 0 12 0"/></svg><span>Retirar tudo</span></button>
+        <button class="restore-all" id="restore-all"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4v6h6M4 10a8 8 0 1 1 0 6"/></svg>Restaurar site</button>
+        <p class="panel-note">O painel didático permanece ativo para você restaurar a apresentação.</p>
+      </div>
+      <div class="sidebar-footer"><span class="footer-mark"></span>Feito para explorar. E criar.</div>
+    </div>
+  </aside>
+
+  <main id="presentation" class="presentation">
+    <header class="topbar"><span>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</span><div><span class="topbar-status"><span></span><span id="active-summary">3 tecnologias ativas</span></span><button class="icon-button" id="fullscreen" aria-label="Entrar em tela cheia" title="Tela cheia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div></header>
+    <div class="experiment-banner" id="experiment-banner" hidden><div><strong>Você está vendo o site por dentro.</strong><span id="experiment-description"></span></div><button data-restore>Restaurar tudo</button></div>
+    <noscript><p class="noscript">A apresentação pode ser lida sem JavaScript. Ative-o no navegador para usar os controles do laboratório.</p></noscript>
+
+    <section class="component-section" id="inicio" data-section="inicio" aria-label="Conheça o curso">
+      <div class="component-toolbar"><span><span class="toolbar-dot"></span>Apresentação do curso</span><div class="component-toggles" aria-label="Tecnologias da apresentação do curso"></div></div>
+      <ads-panel data-component="inicio">
+        <template shadowrootmode="open">
+          <link rel="stylesheet" href="assets/curso.css" data-course-css>
+          <div data-content class="course-intro">
+            <div class="hero-heading"><h1>Seu próximo passo.<br><span>Seu primeiro sistema.</span></h1><div class="hero-caption"><span class="bracket">{</span><p>Da primeira ideia ao que<br>você pode criar com ela.</p><span class="bracket">}</span></div></div>
+            <div class="hero-layout">
+              <div class="course-description"><p class="intro-copy">Aprenda a transformar problemas reais em soluções digitais no curso de <strong>Análise e Desenvolvimento de Sistemas</strong> do IFCE campus Boa Viagem.</p><a class="primary-button" href="#laboratorio" data-navigate="laboratorio">Explore na prática <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a><div class="course-facts"><div><strong>2,5 anos</strong><span>de formação</span></div><div><strong>Presencial</strong><span>em Boa Viagem</span></div><div><strong>2.100 h</strong><span>de aprendizado</span></div></div><a class="source-link" href="https://portal.ifce.edu.br/cursos/boa-viagem-analise-e-desenvolvimento-de-sistemas/" target="_blank" rel="noopener noreferrer">Graduação tecnológica · Conheça o curso no IFCE<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14m0-10H4v16h16v-6"/></svg></a></div>
+              <div class="layer-exhibit" aria-label="As três camadas de uma página web">
+                <div class="exhibit-orbit" aria-hidden="true"></div>
+                <div class="layer layer-html"><div class="layer-top"><span class="layer-label">&lt;html&gt;</span><span>O conteúdo</span></div><div class="skeleton-title"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><span class="layer-end">&lt;/html&gt;</span></div>
+                <div class="layer layer-css"><div class="layer-top"><span class="layer-label">.css { }</span><span>A personalidade</span></div><div class="color-composition"><i></i><i></i><i></i><span>Aa</span></div></div>
+                <div class="layer layer-js"><div class="layer-top"><span class="layer-label">JavaScript</span><span>A experiência</span></div><div class="click-example"><span id="hero-message" aria-live="polite">Uma ideia pode mudar tudo.</span><button data-demo="hero" aria-label="Transformar a ideia em um projeto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z"/></svg><span id="hero-button-label">Dê vida à ideia</span></button></div></div>
+                <span class="exhibit-caption">Três tecnologias. Infinitas possibilidades.</span>
+              </div>
+            </div>
+            <div class="hero-bottom"><span>Você já está usando o que pode aprender a construir.</span><a href="#laboratorio" data-navigate="laboratorio">Vamos desmontar?</a></div>
+          </div>
+        </template>
+      </ads-panel>
+      <div class="html-placeholder" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5"/></svg><h2>Sem HTML, sem conteúdo.</h2><p>A estrutura desta seção foi retirada. Os controles continuam aqui para você trazê-la de volta.</p><button data-restore-component="inicio">Restaurar HTML desta seção</button></div>
+      <p class="component-state" hidden></p>
+    </section>
+
+    <section class="component-section" id="laboratorio" data-section="laboratorio" aria-label="Laboratório web">
+      <div class="component-toolbar"><span><span class="toolbar-dot"></span>Laboratório web</span><div class="component-toggles" aria-label="Tecnologias do laboratório"></div></div>
+      <ads-panel data-component="laboratorio">
+        <template shadowrootmode="open">
+          <link rel="stylesheet" href="assets/curso.css" data-course-css>
+          <div data-content class="lab-section">
+            <div class="section-heading"><h2>Um site. Três ingredientes.<br><span>Experimente tirar um.</span></h2><p>Use os controles desta seção e observe o exemplo. Cada tecnologia tem uma função diferente.</p></div>
+            <div class="lab-workspace"><div class="lab-notes"><article><span class="ingredient html-color">HTML</span><h3>Dá estrutura à ideia.</h3><p>Define títulos, textos, imagens e botões. Sem ele, o conteúdo sai da página.</p><code>&lt;button&gt;Quero criar&lt;/button&gt;</code></article><article><span class="ingredient css-color">CSS</span><h3>Transforma a aparência.</h3><p>Escolhe cores, fontes e espaços. Sem ele, o navegador mostra seus estilos padrão.</p><code>button { border-radius: 12px; }</code></article><article><span class="ingredient js-color">JS</span><h3>Faz a experiência acontecer.</h3><p>Responde ao clique e atualiza informações. Sem ele, o contador para de responder.</p><code>contador = contador + 1;</code></article></div>
+              <div class="live-demo"><div class="demo-window-header"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>seu-primeiro-projeto.html</span><span class="demo-live">Ao vivo</span></div><div class="demo-window-content"><div class="mini-logo" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m20 10-13 14 13 14m8-28 13 14-13 14"/></svg></div><h3>Uma ideia.<br>Seu próximo projeto.</h3><p>Todo grande sistema começa com alguém que decidiu tentar.</p><button class="primary-button" data-demo="counter">Quero criar <span class="counter" id="click-count" aria-live="polite">0</span></button><span class="counter-caption" id="counter-caption">Clique e veja o JavaScript em ação.</span></div><div class="demo-window-footer"><span>Exemplo interativo</span><span>HTML + CSS + JS</span></div></div>
+            </div>
+            <div class="lab-tip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-6 3h6m-6-6a6 6 0 1 1 6 0v3H9v-3Z"/></svg><p><strong>Comece pelo CSS.</strong> Retire o estilo, teste o botão e veja: aparência e funcionamento são coisas diferentes.</p></div>
+          </div>
+        </template>
+      </ads-panel>
+      <div class="html-placeholder" hidden><h2>O exemplo perdeu sua estrutura.</h2><p>Sem os elementos HTML, não existem texto, botão ou contador para exibir.</p><button data-restore-component="laboratorio">Restaurar HTML desta seção</button></div><p class="component-state" hidden></p>
+    </section>
+
+    <section class="component-section" id="formacao" data-section="formacao" aria-label="Sua formação em ADS">
+      <div class="component-toolbar"><span><span class="toolbar-dot"></span>Sua formação em ADS</span><div class="component-toggles" aria-label="Tecnologias da seção de formação"></div></div>
+      <ads-panel data-component="formacao">
+        <template shadowrootmode="open">
+          <link rel="stylesheet" href="assets/curso.css" data-course-css>
+          <div data-content class="formation-section"><div class="section-heading"><h2>Você aprende código.<br><span>E vai muito além dele.</span></h2><p>Construir um sistema envolve entender pessoas, organizar ideias e criar soluções que funcionam.</p></div>
+            <div class="formation-layout"><div class="learning-paths" role="tablist" aria-label="Áreas de formação" aria-orientation="vertical"><button class="learning-tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true" data-demo="path" data-path="web"><span class="path-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M8 22h8m-4-4v4m-4-11 3 3 5-6"/></svg></span><span><strong>Desenvolvimento web</strong><small>Da lógica à aplicação</small></span><svg viewBox="0 0 24 24" class="chevron" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button><button class="learning-tab" role="tab" id="tab-inclusao" aria-controls="panel-inclusao" aria-selected="false" tabindex="-1" data-demo="path" data-path="inclusao"><span class="path-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M4 9h16m-8-6c-5 5-5 13 0 18m0-18c5 5 5 13 0 18M4 15h16"/></svg></span><span><strong>Acessibilidade e inclusão</strong><small>Tecnologia para todas as pessoas</small></span><svg viewBox="0 0 24 24" class="chevron" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button><button class="learning-tab" role="tab" id="tab-qualidade" aria-controls="panel-qualidade" aria-selected="false" tabindex="-1" data-demo="path" data-path="qualidade"><span class="path-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z"/><path d="m8 12 3 3 5-6"/></svg></span><span><strong>Experiência e qualidade</strong><small>Confiança em cada interação</small></span><svg viewBox="0 0 24 24" class="chevron" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div>
+              <div class="path-panels"><article class="path-panel" id="panel-web" role="tabpanel" aria-labelledby="tab-web" tabindex="0"><span class="panel-symbol" aria-hidden="true">{ }</span><h3>Da primeira linha<br>à solução completa.</h3><p>Você desenvolve a base para criar sites, sistemas e aplicações para dispositivos móveis.</p><ul class="discipline-list"><li><b>TWEB</b> Tecnologias Web</li><li><b>PWEB I e II</b> Programação Web</li><li><b>PDM</b> Programação para Dispositivos Móveis</li><li><b>LLPR</b> Lógica e Linguagem de Programação</li><li><b>PEED</b> Programação Estruturada e Estrutura de Dados</li><li><b>POO</b> Programação Orientada a Objetos</li></ul></article><article class="path-panel" id="panel-inclusao" role="tabpanel" aria-labelledby="tab-inclusao" tabindex="0" hidden><span class="panel-symbol" aria-hidden="true">aA</span><h3>Uma boa interface<br>inclui mais pessoas.</h3><p>Você aprende a considerar diferentes formas de acessar, compreender e utilizar a tecnologia.</p><ul class="discipline-list"><li><b>IHC</b> Interface Humano-Computador</li><li><b>EITA</b> Educação Especial, Inclusiva e Tecnologias Assistivas</li><li><b>LIB</b> Libras</li></ul></article><article class="path-panel" id="panel-qualidade" role="tabpanel" aria-labelledby="tab-qualidade" tabindex="0" hidden><span class="panel-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z"/><path d="m8 12 3 3 5-6"/></svg></span><h3>Funcionar bem<br>também se projeta.</h3><p>Você estuda como planejar, testar, proteger e manter aplicações que atendam às necessidades de quem usa.</p><ul class="discipline-list"><li><b>ENS</b> Engenharia de Software</li><li><b>APS</b> Análise e Projeto de Sistemas</li><li><b>TQS</b> Teste e Qualidade de Software</li><li><b>DEV</b> DevOps</li><li><b>FSI</b> Fundamentos de Segurança da Informação</li><li><b>DIG</b> Direito Digital</li></ul></article></div></div>
+            <p class="content-source">Áreas e disciplinas organizadas a partir do material da apresentação. Consulte o PPC oficial para a matriz curricular vigente.</p>
+          </div>
+        </template>
+      </ads-panel><div class="html-placeholder" hidden><h2>As informações também são HTML.</h2><p>Títulos, listas de disciplinas e abas saíram desta seção.</p><button data-restore-component="formacao">Restaurar HTML desta seção</button></div><p class="component-state" hidden></p>
+    </section>
+
+    <section class="component-section" id="acessibilidade" data-section="acessibilidade" aria-label="Tecnologia para todos">
+      <div class="component-toolbar"><span><span class="toolbar-dot"></span>Tecnologia para todos</span><div class="component-toggles" aria-label="Tecnologias da seção de acessibilidade"></div></div>
+      <ads-panel data-component="acessibilidade"><template shadowrootmode="open"><link rel="stylesheet" href="assets/curso.css" data-course-css><div data-content class="access-section"><div class="access-layout"><div><h2>Se é para pessoas,<br><span>é para todas elas.</span></h2><p class="access-copy">Desenvolver vai além do visual. Uma boa experiência considera diferentes formas de ver, navegar e se comunicar.</p><ul class="access-list"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Contraste que facilita a leitura</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Navegação completa pelo teclado</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Conteúdo compreensível e bem organizado</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Compatibilidade com leitores de tela</li></ul></div><div class="access-demo"><div class="access-demo-controls"><span>Veja a diferença</span><button data-demo="contrast" aria-pressed="false">Aumentar contraste</button></div><div class="contrast-example" id="contrast-example"><span class="sample-tag">Exemplo de leitura</span><h3>O acesso abre<br>possibilidades.</h3><p>Uma mudança de contraste pode tornar uma mensagem mais fácil de ler.</p></div><p class="access-tip" id="contrast-note" aria-live="polite">Teste também o teclado: pressione Tab para navegar.</p></div></div><details class="native-details"><summary>Por que esta caixa abre mesmo com o JS desligado?</summary><p>O elemento HTML <code>&lt;details&gt;</code> já tem esse comportamento no navegador. Algumas interações são nativas do HTML; outras, como o contador do laboratório, são programadas com JavaScript.</p></details></div></template></ads-panel><div class="html-placeholder" hidden><h2>Sem estrutura, a mensagem se perde.</h2><p>Os elementos desta seção foram removidos da apresentação.</p><button data-restore-component="acessibilidade">Restaurar HTML desta seção</button></div><p class="component-state" hidden></p>
+    </section>
+
+    <section class="component-section" id="desafio" data-section="desafio" aria-label="Seu primeiro desafio">
+      <div class="component-toolbar"><span><span class="toolbar-dot"></span>Seu primeiro desafio</span><div class="component-toggles" aria-label="Tecnologias do desafio"></div></div>
+      <ads-panel data-component="desafio"><template shadowrootmode="open"><link rel="stylesheet" href="assets/curso.css" data-course-css><div data-content class="challenge-section"><div class="challenge-top"><div><h2>Agora é com você.<br><span>O que está faltando?</span></h2><p>Um site mostra os textos e o botão. O botão funciona, mas tudo aparece sem cores, sem espaçamento e com a fonte padrão.</p></div><span class="challenge-art" aria-hidden="true">?</span></div><fieldset class="quiz"><legend>Qual tecnologia foi retirada?</legend><div class="quiz-options"><button data-demo="answer" data-answer="html" aria-pressed="false"><span class="answer-code html-color">&lt;&gt;</span><strong>HTML</strong><span>A estrutura</span></button><button data-demo="answer" data-answer="css" aria-pressed="false"><span class="answer-code css-color">#</span><strong>CSS</strong><span>A aparência</span></button><button data-demo="answer" data-answer="js" aria-pressed="false"><span class="answer-code js-color">JS</span><strong>JavaScript</strong><span>A interatividade</span></button></div><p class="quiz-feedback" id="quiz-feedback" aria-live="polite">Escolha uma tecnologia para responder.</p><button class="quiz-reset" data-demo="quiz-reset" hidden>Tentar novamente</button></fieldset><div class="closing"><h3>O próximo projeto<br>pode ser o seu.</h3><div><p>Conheça a formação em ADS<br>no IFCE campus Boa Viagem.</p><a href="https://portal.ifce.edu.br/cursos/boa-viagem-analise-e-desenvolvimento-de-sistemas/" target="_blank" rel="noopener noreferrer" class="primary-button">Conheça o curso no IFCE<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14m0-10H4v16h16v-6"/></svg></a></div></div></div></template></ads-panel><div class="html-placeholder" hidden><h2>Até uma pergunta precisa de estrutura.</h2><p>Restaure o HTML para trazer o desafio de volta.</p><button data-restore-component="desafio">Restaurar HTML desta seção</button></div><p class="component-state" hidden></p>
+    </section>
+    <footer class="page-footer"><a class="footer-wordmark" href="#inicio">ADS <strong>por dentro.</strong></a><p>Um convite para entender, experimentar e criar.</p><span>Apresentação acadêmica · IFCE Boa Viagem</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
